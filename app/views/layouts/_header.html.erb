@@ -1,0 +1,26 @@
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <%= link_to 'ProgUroki', root_path, class: "navbar-brand" %>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav pull-right">
+                <li><%= link_to 'Куррикулум', pages_curriculum_path %></li>		
+                <% if current_user %>
+                    <li><%= link_to 'Новая запись', new_post_path %></li>
+                		<% end %>
+
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>

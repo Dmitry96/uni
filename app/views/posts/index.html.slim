@@ -1,0 +1,11 @@
+- @posts.each do |post|
+  article.row
+  aside.col-lg-2.post-meta
+    span.publication-date= Russian::strftime(post.created_at, "%e %B %Y")
+  .col-lg-10
+    h2= link_to post.title, post
+    - if current_user
+        p= link_to 'Редактировать пост', edit_post_path(post)
+        hr
+
+= will_paginate @posts, previous_label: "← Туда", next_label: "Сюда →"

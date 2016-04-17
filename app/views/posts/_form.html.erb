@@ -1,0 +1,17 @@
+<%= form_for @post do |f| %>
+<%= f.label :title, "Название поста" %>
+<br>
+<%= f.text_field :title, class: "form-control" %>
+<br>
+<%= f.label :url, "Текст в URL" %>
+<br>
+<%= f.text_field :url, class: "form-control" %>
+<br>
+<%= f.text_area :content, class: "form-control insert-post-here", rows: 17 %>
+<br>
+<%= f.label :published, "Опубликовано?" %>
+<%= f.check_box :published, class: 'form-control' %>
+<br>
+<%= f.submit "Опубликовать", class: "btn btn-success" %>
+
+<% end %>

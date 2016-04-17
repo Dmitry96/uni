@@ -1,0 +1,36 @@
+.container
+  .col-sm-8.col-sm-offset-2.col-lg-8.col-lg-offset-2.text-center
+    h1 = @course.title
+    
+    .course-description
+      p.text-muted= @course.description
+
+  .col-sm-8.col-sm-offset-2.col-lg-8.col-lg-offset-2
+    - @course.sections.each do |section|
+        h2 id=("section-#{section.slug}") = section.title
+        .section-description
+          .col-xs-12
+            p.text-muted = section.description
+              ul.lessons-list
+                - section.lessons.each.with_index(1) do |lesson, index|
+                  li.row
+                    = link_to [@course, lesson], class: 'link-to-lesson' do
+                      h2.text-muted
+                        ' Шаг #{index}:
+                        span class=(lesson.is_project? ? 'text-danger' : 'text-primary') = lesson.title
+                      .col-xs-12.lesson-description
+                        = lesson.description
+
+            ul.lessons-list
+              - section.lessons.each.with_index(1) do |lesson, index|
+                li.row
+                 
+
+                  = link_to [@course, lesson], class: 'link-to-lesson' do
+                    h2.text-muted
+                      ' Шаг #{index}:
+                      span class=(lesson.is_project? ? 'text-danger' : 'text-primary') = lesson.title
+                    .col-xs-12.lesson-description
+                      = lesson.description
+
+

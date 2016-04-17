@@ -1,0 +1,27 @@
+.container-fluid
+  .row
+    .col-sm-9.col-sm-offset-1.col-lg-8.col-lg-offset-2.col-md-8.col-md-offset-2.col-xs-12
+      .lesson
+        .content
+          - if user_signed_in?
+            .text-center
+
+          = MarkdownPresenter.call @lesson.content
+
+          - if user_signed_in?
+            .text-center
+              h2.toggle-check id=(dom_id @lesson)
+                
+          .text-center.charity
+            hr
+           
+          = render 'lessons_navigation', lesson: @lesson, course: @course
+          
+
+      .row
+        .col-sm-10.col-sm-offset-1
+         
+    .col-sm-2.col-lg-2
+      
+
+     
