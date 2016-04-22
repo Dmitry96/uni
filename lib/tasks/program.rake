@@ -4,7 +4,7 @@ namespace :curriculum do
     puts 'Getting content...'
 
     puts 'Authorizing on Github'
-    github = Github::Client::Repos.new user: 'Dmitry96', repo: 'curriculum', oauth_token: "e025b56ddf3d55485f1eed08ff7be6b3cf275dd6"
+    github = Github::Client::Repos.new user: 'Dmitry96', repo: 'curriculum', oauth_token: "004bd1bd3c0ff48d63c61e642d6b373497c2340b"
 
     lessons = Lesson.all
     count = lessons.count

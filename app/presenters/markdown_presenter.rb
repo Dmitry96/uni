@@ -12,7 +12,9 @@ class MarkdownPresenter
       lax_spacing: true,
       strikethrough: true,
       superscript: true,
-      space_after_headers: true
+      space_after_headers: true,
+      tables: true,
+      highlight: true
     }
     Redcarpet::Markdown.new(renderer, options).render(text).html_safe
   end

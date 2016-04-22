@@ -4,12 +4,13 @@
   <%= link_to 'Удалить', @post, method: :delete, data: { confirm: 'Are you sure?' } %>
 <% end %>
 <article class="row">
-  <aside class="col-lg-2 post-meta">
-    <span class="publication-date"><%= Russian::strftime(@post.created_at, "%e %B %Y") %></span>
+  <aside class=".col-xs-12 post-meta">
+    
   </aside>
      <div class="post-content">
         <%= @post.content %>
      </div>
+     <span class="publication-date"><%= Russian::strftime(@post.created_at, "%e %B %Y") %></span>
 </div>
 <% provide(:title, @post.title) %>
 </article>

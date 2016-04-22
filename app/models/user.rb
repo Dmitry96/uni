@@ -9,6 +9,6 @@ class User < ActiveRecord::Base
          :validatable
       
   has_many :lessons
-
+  has_paper_trail
 
 end

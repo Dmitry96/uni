@@ -22,6 +22,9 @@ gem 'kramdown'
 gem "github_api"
 gem 'omniauth-github'
 gem 'redcarpet'
+gem 'paper_trail'
+gem 'simple_form'
+
 
 
 group :development, :test do

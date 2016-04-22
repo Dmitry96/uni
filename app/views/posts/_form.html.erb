@@ -1,4 +1,4 @@
-<%= form_for @post do |f| %>
+<%= simple_form_for @post do |f| %>
 <%= f.label :title, "Название поста" %>
 <br>
 <%= f.text_field :title, class: "form-control" %>
