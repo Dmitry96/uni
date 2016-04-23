@@ -51,12 +51,10 @@ article.row {
 h3 a {
   transition: color 0.3s ease;
   color: 428bca;
-
-  &:hover {
     color: #3E5BA2;
     text-decoration: none;
   }
-}
+
 
 .pagination {
   text-align: center;
@@ -68,17 +66,22 @@ h3 a {
   margin-right: 15px;
 }
 
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  background-color: red;
-  a:visited;
-  color: #000;
+.header {
+font-family:'Open Sans', sans-serif;
+color: #000;
+font-size: 16px;
+background: #FFF;
+box-shadow: 0 0 20px #888;
+position: relative;
+overflow: hidden;
 
 }
 
-header ul {
-font-size:16px !important;
-font-family:'Open Sans', sans-serif
+.footer{
+font-size:18px !important;
+font-family:'Open Sans', sans-serif;
+}
+
+a.ul:hover {
+  color: blue !important;
 }
