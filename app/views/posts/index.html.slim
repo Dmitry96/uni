@@ -1,13 +1,10 @@
-.home-header
-	= image_tag('home-head-background.jpg', class: 'img-responsive', alt: 'Фон-заголовок')
-
-
 - @posts.each do |post|
   article.row
   aside.col-lg-2.post-meta
-    span.publication-date= Russian::strftime(post.created_at, "%e %B %Y")
   .col-lg-10
     h2= link_to post.title, post
+    .text-right
+    	span.publication-date= Russian::strftime(post.created_at, "%e %B %Y")
     hr
   
 
