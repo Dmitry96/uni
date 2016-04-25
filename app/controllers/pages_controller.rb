@@ -4,8 +4,11 @@ class PagesController < ApplicationController
 
   def contacts
   end
-  
- def curriculum
+
+  def faq
+  end
+
+  def curriculum
     @courses = Course.find_each
   end
 end

@@ -1,0 +1,17 @@
+nav.navbar.navbar-default role="navigation"
+	.container
+		.navbar-header
+			= link_to 'ProgUroki', root_path, class: "navbar-brand" 
+			
+		.collapse.navbar-collapse#collapse-navbar
+  			ul.nav.navbar-nav.navbar-right
+    			li.dropdown
+      				a.dropdown-toggle data-toggle='dropdown' href="#" Функции
+        				<span class="caret"></span>
+          			ul.dropdown-menu role="menu"
+            			- if current_user
+              				li = link_to 'Новая запись', new_post_path 
+              				li = link_to "Выход", destroy_user_session_path
+
+				li = link_to 'Куррикулум', pages_curriculum_path
+
