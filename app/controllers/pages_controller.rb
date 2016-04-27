@@ -8,6 +8,10 @@ class PagesController < ApplicationController
   def faq
   end
 
+  def home
+    @posts = Post.find_each
+  end
+
   def curriculum
     @courses = Course.find_each
   end

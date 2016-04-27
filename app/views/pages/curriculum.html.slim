@@ -1,0 +1,23 @@
+.container
+  .col-sm-10.col-sm-offset-1.col-lg-8.col-lg-offset-2.courses-list
+    h1.text-center Это ваш путь к изучению программирования!
+
+    .course-description.text-muted
+      p Если вы хотите стать программистом, вы попали в нужное место.Мы пройдём основные темы по нижепречисленным языкам программирования.Набравшись опыта, вы сможете идти дальше, в интереснейший мир IT !
+      
+
+      p Курсы разработаны с расчетом на то, что вы будете проходить их по порядку, так что начните с верхнего и постепенно двигайтесь вниз.
+      p Самое лучшее, что все это бесплатно!
+
+
+    .courses
+      ul.courses-list
+        - @courses.with_index(1) do |course, index|
+        	li.row.course class=('well' if new_one(course, 'Изучаем С++'))
+            h1 = course_link(course, index, new_one(course, 'ИИзучаем С++'))
+            .col-sm-8.col-md-9.description.text-muted
+              = course.short_description
+
+            
+                 
+          
