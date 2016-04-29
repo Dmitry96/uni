@@ -9,7 +9,6 @@ class PagesController < ApplicationController
   end
 
   def home
-    @posts = Post.find_each
   end
 
   def curriculum
